@@ -24,7 +24,7 @@ public class LoginController {
 	LoginService loginService;
 
 	@GetMapping("/login")
-	public String lognform(Model model) {
+	public String loginForm(Model model) {
 		model.addAttribute("loginFormData", new LoginFormDTO());
 		return "/login";
 	}

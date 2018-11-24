@@ -21,7 +21,7 @@ public class RegistrationController {
 	RegistrationService registrationService;
 
 	@GetMapping
-	public String pepareRegistrationForm(Model model) {
+	public String prepareRegistrationForm(Model model) {
 		model.addAttribute("registrationFormData", new RegistrationFormDTO());
 
 		return "/registration";

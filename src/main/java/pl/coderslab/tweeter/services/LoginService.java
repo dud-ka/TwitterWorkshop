@@ -40,7 +40,6 @@ public class LoginService {
 		userDTO.setId(user.getId());
 		userDTO.setEmail(user.getEmail());
 		userDTO.setLogin(user.getLogin());
-		userDTO.setId(user.getId());
 		return userDTO;
 	}
 }
