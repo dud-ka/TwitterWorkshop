@@ -6,7 +6,7 @@ import pl.coderslab.tweeter.dal.repositories.UserRepository;
 import pl.coderslab.tweeter.domain.User;
 import pl.coderslab.tweeter.web.dtos.RegistrationFormDTO;
 
-import javax.jws.soap.SOAPBinding;
+
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
