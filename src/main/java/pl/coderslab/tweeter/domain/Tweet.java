@@ -7,6 +7,9 @@ import org.hibernate.validator.constraints.NotBlank;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.sql.Timestamp;
+import java.util.Objects;
+
+import static javax.persistence.FetchType.EAGER;
 
 @Entity
 @Table(name = "tweets")
@@ -15,9 +18,8 @@ public class Tweet {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(nullable = false)
 	@ManyToOne
-	@JoinColumn(name = "user")
+	@JoinColumn(nullable = false)
 	private User user;
 	@Size(min = 1, max = 140)
 	@NotBlank
@@ -56,4 +58,5 @@ public class Tweet {
 	public void setCreated(Timestamp created) {
 		this.created = created;
 	}
+
 }
