@@ -21,14 +21,16 @@
     <div>
         <p>Zalogowany użytkownik: ${loggedUser.login} </p>
         <button><a href="/logout">WYLOGUJ</a></button>
+        <button><a href="/userPage">Moja tablica</a></button>
+
     </div>
 
     <%-- ===== NEW TWEET FORM ===== --%>
     <div>
         <form:form modelAttribute="addTweet" method="post">
-            <div><form:errors path="*" /></div>
+            <div><form:errors path="text" /></div>
             <label for="tweet">Stwórz nowego tweeta</label>
-            <form:textarea path="text" name="tweet"/>
+            <form:input path="text" name="tweet"/>
             <form:button value="WYŚLIJ"> WYŚLIJ </form:button>
         </form:form>
     </div>

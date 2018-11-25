@@ -33,15 +33,6 @@ public class HomePageController {
         return "/index";
     }
 
-    @PostMapping
-    public String createTweet(@ModelAttribute("addTweet") @Valid TweetDTO tweetDTO,
-                              BindingResult bindingResult, HttpSession session) {
-        if(bindingResult.hasErrors()){
-            return "redirect:/";
-        }
-         tweetService.newTweet(tweetDTO, session);
-         return "redirect:/";
-    }
 
 
 }
