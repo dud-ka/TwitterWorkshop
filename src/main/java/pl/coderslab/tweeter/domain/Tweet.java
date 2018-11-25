@@ -3,6 +3,7 @@ package pl.coderslab.tweeter.domain;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
+import pl.coderslab.tweeter.web.dtos.UserDTO;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
